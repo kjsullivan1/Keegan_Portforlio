@@ -1,0 +1,56 @@
+
+ul.Links{
+    padding: 0px;
+    background-color:darkslategrey;
+    text-align: center;
+    
+}
+
+ul.Links >li{
+    display: inline-block;
+    padding: 12px 40px;
+    color:black;
+    font-size: large;
+}
+ul.Links > li:hover{
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background-color:cornflowerblue;
+}
+
+img.autoMaticTitle{
+    position: absolute;
+    left: 650px;
+    top: 200px;
+    width: 350px;
+    height: 225px;
+    
+}
+
+img.autoMaticInGame0{
+    position: absolute;
+    left: 1050px;
+    top: 200px;
+    width: 350px;
+    height: 225px;
+}
+
+img.MonoGameLogo{
+    position: absolute;
+    left: 850px;
+    top: 445px;
+    width: 350x;
+    height: 250px;
+}
+
+hr.footer{
+    position: absolute;
+    bottom: 0;
+}

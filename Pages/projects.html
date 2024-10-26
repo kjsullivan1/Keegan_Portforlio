@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" type="text/css" href="/projects.css">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;" name ="title">
+        <br>
+        <h1>Projects</h1>
+        <hr noshade size="4" width="50%" color="black"/>
+    </div>
+    <ul class = "Links">
+        <li><a href="/Pages/index.html">About</a></li>
+        <li><a href="/Pages/projects.html">Projects</a></li>
+        <li><a href="/Pages/resume.html">Resume</a></li>
+        <li><a href="/Pages/contact.html">Contact</a></li>
+    </ul>
+
+    <ul class="projectList">
+        <li><button type="button" class="AutoMaticBtn"onclick="AutoMatic()">Auto-Matic</button></li>
+        <li><button type="button" class="GameJamBtn" onclick="GameJam()">GameJam</button></li>
+    </ul>
+
+    <p id="intro" class="introGraph">Press the buttons below to see the specified project</p>
+
+    <p id="gameDesc">Hello, this is to describe Auto-Matic</p>
+
+    
+
+    <script>
+        var gameDescription = document.getElementById("gameDesc");
+            gameDescription.style.position = "absolute";
+            gameDescription.style.top = "300px";
+            gameDescription.style.padding = "10px 30px";
+        function AutoMatic(){
+            gameDescription.innerText = 
+            "Auto-Matic was my Capstone in my Bachelor's degree program at New England Institute of technology";
+
+            gameDescription.style.position = "absolute";
+            gameDescription.style.top = "300px";
+            gameDescription.style.padding = "10px 30px";
+        }
+    </script>
+    <hr noshade size="40" width="99%" color="darkslategrey" class="footer"/>
+</body>
+</html>
