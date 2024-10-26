@@ -25,7 +25,7 @@ body{
 }
 
 hr.footer{
-    position: absolute;
+    position:fixed;
     bottom: 0;
 }
 
@@ -47,4 +47,17 @@ p.introGraph{
     background-color: black;
     color: white;
     text-align: center;
+}
+
+p.gameDescription{
+    color: white;
+    width: 80%;
+    left: 8%;
+}
+
+img.AutoMaticTitle{
+    width: 300px;
+    position: absolute;
+    top: 550px;
+    left:175px;
 }

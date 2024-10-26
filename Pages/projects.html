@@ -21,12 +21,17 @@
 
     <ul class="projectList">
         <li><button type="button" class="AutoMaticBtn"onclick="AutoMatic()">Auto-Matic</button></li>
-        <li><button type="button" class="GameJamBtn" onclick="GameJam()">GameJam</button></li>
+        <li><button type="button" class="GameJamBtn" onclick="GameJam()">Liberation of Color</button></li>
     </ul>
 
     <p id="intro" class="introGraph">Press the buttons below to see the specified project</p>
 
-    <p id="gameDesc">Hello, this is to describe Auto-Matic</p>
+
+    <div id="projectDesc">
+        <p id="gameDesc" class="gameDescription"></p>
+        <img id="autoMaticTitle" src="/Images/AutoMatic_Title.png" style="visibility: hidden;" class="AutoMaticTitle">
+    </div>
+   
 
     
 
@@ -35,15 +40,33 @@
             gameDescription.style.position = "absolute";
             gameDescription.style.top = "300px";
             gameDescription.style.padding = "10px 30px";
+        var gameImage = document.getElementById("autoMaticTitle");
         function AutoMatic(){
-            gameDescription.innerText = 
-            "Auto-Matic was my Capstone in my Bachelor's degree program at New England Institute of technology";
-
+            var newText = "Auto-Matic was my Bachelor program's Capstone project at New England Institute of Technology. A highlight of this project is that, even though it was a team of 3, it was solo-developed by me using the MonoGame framework. Similar to the design of this portfolio, with MonoGame, you are given a blank blue screen, the ability to manage content, and a few object classes to make a game. My role for this project was to essentially, build everything. To even begin our game we needed a physics engine and the ability to create maps for the player to move in. This was one of the best moments of the project for me as I had so much to do and I enjoyed the problem solving of discovering every small detail needed for what we were doing. The enemy AI was also programmed by me and I did not, nor did I plan to, use any libraries like 'PathFinder'. As I feel very green in this field, developing a project in MonoGame felt like the perfect opportunity to discover everything I could about the abilities I have been working on the previous 3 years. The overall project started to gain more friction towards the beginning of the end of development. However, with proper communication and open-mindedness, we were able to get over small humps and disagreements. One of the main mechanics was being questioned and was starting to be moved in a different direction than what another member of the team wanted. We didn't turn the situation into a simple numbers game and single out the other person, we talked and came to a conclusion."
+            
+            
+            gameDescription.innerText = newText;
             gameDescription.style.position = "absolute";
             gameDescription.style.top = "300px";
             gameDescription.style.padding = "10px 30px";
+            gameDescription.style.backgroundColor = "black"
+            
+            gameImage.style.visibility = "visible";
+           // gameDescription.style.width = "80%";
+           // gameDescription.style.alignContent ="center";
+
+           document.getElementById("footer").style.bottom = "0";
+        }
+        function GameJam(){
+            var newText = "Liberation of Color was a GameJam project that was developed in a team of 6. To count, there were 2 Developers and 4 designers. The purpose of an event like a GameJam is to gather people into teams and make a game in a short period of time and minimal breaks. Unlike my MonoGame Capstone project, this GameJam was made in Unity. My roles in this project are as follows: Player Controller, Game Flow (make the game flow between scenes when conditions are met), and Boss AI/Mechanics. This project was to be completed within 24 hours and I feel we were able to accomplish this goal. However, this project, as you're putting a bunch of sleep-deprived young adults into a room to work together for 24 hours straight, problems will end up occurring. As for myself, I felt as if my co-developer wasn't pulling their weight on getting the game to a point where it felt good for me. That is all it was, my own opinions. I never said anything encouraging more work as I understood we were gathered to have fun, but I also knew there was an expectation. I worked to make sure those expectations were met (with very little time to spare), and am happy to say we were able to put the full game on Itch.IO.";
+
+            gameDescription.innerText = newText;
+            gameDescription.style.position = "absolute";
+            gameDescription.style.top = "300px";
+            gameDescription.style.padding = "10px 30px";
+            gameDescription.style.backgroundColor = "black"
         }
     </script>
-    <hr noshade size="40" width="99%" color="darkslategrey" class="footer"/>
+    <hr noshade size="40" width="99%" color="darkslategrey" id="footer" class="footer"/>
 </body>
 </html>
