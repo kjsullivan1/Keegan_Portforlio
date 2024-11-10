@@ -1,0 +1,72 @@
+
+ul.Links{
+    padding: 0px;
+    background-color:darkslategrey;
+    text-align: center;
+    
+}
+
+ul.Links >li{
+    display: inline-block;
+    padding: 12px 40px;
+    color:black;
+    font-size: large;
+}
+ul.Links > li:hover{
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background-color:cornflowerblue;
+}
+div.abtMeDiv{
+    width: 50%;
+    top:25%;
+}
+
+p.abtMe{
+    background-color: black;
+    color: white;
+  
+}
+div.abtMeImgs{
+    position: absolute;
+    top: 25%;
+    width: 45%;
+    left: 52%;
+}
+img.autoMaticTitle{
+    position:absolute;
+    left: 10px;
+    top: 0px;
+    width: 350px;
+    height: 213px;
+    
+}
+
+img.autoMaticInGame0{
+    position: absolute;
+    left: 375px;
+    top: -10px;
+    width: 275px;
+    height: 150px;
+    padding: 10px;
+}
+
+img.MonoGameLogo{
+    position: absolute;
+    left: 340px;
+    top: 150px;
+    width: 175x;
+    height: 125px;
+}
+
+hr.footer{
+    position: absolute;
+    bottom: 0;
+}
