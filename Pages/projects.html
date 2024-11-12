@@ -32,12 +32,26 @@
         <img id="autoMaticTitle" src="../Images/AutoMatic_Title.png" style="visibility: hidden;" class="AutoMaticTitle">
         <img id="autoMaticSideGif" src="../Images/SideScrollGeneration.gif" style="visibility: hidden;" class="AutoMaticSideGif">
         <img id="autoMaticTopGif" src="../Images/TopDownGeneration.gif" style="visibility: hidden;" class="AutoMaticTopGif">
+      
+
 
         <img id="loCTitle" src="../Images/Loc_Title.png" style="visibility: hidden;" class="LoCTitle">
         <img id="loCPreBoss" src="../Images/LoC_PreBoss.png" style="visibility: hidden;" class="LoCPreBoss">
         <img id="loCGamePlay" src="../Images/LoC_GamePlay.gif" style="visibility: hidden;" class="LoCGamePlay">
 
+        
+
         <p id="gameDesc2" class="gameDescription2"></p>
+    </div>
+
+    <div id="jumpCodeDiv" style="background-color: black; visibility: hidden; text-align: center;" class="JumpCodeDiv">
+        <h2 style="color: white; text-decoration: underline;">Code Samples</h2>
+        <p id="jumpSampleP0" class="jumpCodeP0" style="visibility: hidden; color: white;"></p>
+        <p id="jumpSampleP1" class="jumpCodeP1" style="visibility: hidden; color: white;"></p>
+        <p id="jumpSampleP2" class="jumpCodeP2" style="visibility: hidden; color: white;"></p>
+        <img id="jumpCodeSample0" src="../Images/AutoMatic_CodeSample0_JumpTests.png" style="visibility: hidden;" class="jumpSample0">
+        <img id="jumpCodeSample1" src="../Images/AutoMatic_CodeSample01_TestJump1.png" style="visibility: hidden;" class="jumpSample1">
+        <img id="jumpCodeSample2" src="../Images/AutoMatic_CodeSample02_TestJump2.png" style="visibility: hidden;" class="jumpSample2">
     </div>
 
     <script>
@@ -52,15 +66,28 @@
         var autoMaticSide = document.getElementById("autoMaticSideGif");
         var autoMaticTop = document.getElementById("autoMaticTopGif");
 
+        var jumpCodeDiv = document.getElementById("jumpCodeDiv");
+        var jumpCode0 = document.getElementById("jumpCodeSample0");
+        var jumpCode1 = document.getElementById("jumpCodeSample1");
+        var jumpCode2 = document.getElementById("jumpCodeSample2");
+
+        var jumpP1 = document.getElementById("jumpSampleP0");
+        var jumpP2 = document.getElementById("jumpSampleP1");
+        var jumpP3 = document.getElementById("jumpSampleP2");
+
         var libColorTitle = document.getElementById("loCTitle");
         var libColorPreBoss = document.getElementById("loCPreBoss");
         var libColorGamePlay = document.getElementById("loCGamePlay");
+
         console.log(libColorTitle);
 
         function AutoMatic(){
             var newText = "Auto-Matic was my Bachelor program's Capstone project at New England Institute of Technology. A highlight of this project is that, even though it was a team of 3, it was solo-developed by me using the MonoGame framework. Similar to the design of this portfolio, with MonoGame, you are given a blank blue screen, the ability to manage content, and a few object classes to make a game. My role for this project was to essentially, build everything. To even begin our game we needed a physics engine and the ability to create maps for the player to move in. This was one of the best moments of the project for me as I had so much to do and I enjoyed the problem solving of discovering every small detail needed for what we were doing. The enemy AI was also programmed by me and I did not, nor did I plan to, use any libraries like 'PathFinder'. As I feel very green in this field, developing a project in MonoGame felt like the perfect opportunity to discover everything I could about the abilities I have been working on the previous 3 years. The overall project started to gain more friction towards the beginning of the end of development. However, with proper communication and open-mindedness, we were able to get over small humps and disagreements. One of the main mechanics was being questioned and was starting to be moved in a different direction than what another member of the team wanted. We didn't turn the situation into a simple numbers game and single out the other person, we talked and came to a conclusion."
             var newText1 = "As for the game itself, Auto-Matic is a Metroidvania that mixes 2D side-scroll platforming with top-down dungeons. Each side-scrolling area (4 in total) ends in a dungeon, and each dungeon ends with a boss fight. Once you defeat the boss, you obtain their weapon and are able to use it in the side-scrolling sections of the game. After completing the dungeons and reaching the other side of the ship (the setting for this game), the player is challenged to defeat the final boss. We were given 20 (with a 6 week summer break making 26) weeks to complete this project as a group and the game should be available on steam!"
             
+            var jumpDesc0 = "There were a lot of options to represent the code. In the end, I decided to show off the enemy's jump algorithm and my map building algorithm. To start, is my enemy's jump.";
+
+
             gameDescription.innerText = newText;
             gameDescription.style.position = "absolute";
             gameDescription.style.top = "275px";
@@ -76,6 +103,18 @@
             gameImage.style.visibility = "visible";
             autoMaticSide.style.visibility = "visible";
             autoMaticTop.style.visibility = "visible";
+
+            jumpCodeDiv.style.visibility = "visible";
+            jumpCode0.style.visibility = "visible";
+            jumpCode1.style.visibility = "visible";
+            jumpCode2.style.visibility = "visible";
+
+            jumpP1.style.visibility = "visible";
+            jumpP1.style.textAlign = "none";
+            jumpP1.innerText = jumpDesc0;
+            jumpP2.style.visibility = "visible";
+            jumpP3.style.visibility = "visible";
+
             //console.log(gameImage);
 
 
@@ -85,8 +124,11 @@
    
            // gameDescription.style.width = "80%";
            // gameDescription.style.alignContent ="center";
-            document.getElementById("footer").style.top = "825px";
+            document.getElementById("footer").style.top = "323%";
         
+            jumpCodeDiv.style.top = "110%";
+            jumpCodeDiv.style.height = "210%";
+           // window.scrollbars.visible = "true";
 
         }
         function GameJam(){
@@ -108,6 +150,16 @@
             gameImage.style.visibility = "hidden";
             autoMaticSide.style.visibility = "hidden";
             autoMaticTop.style.visibility = "hidden";
+
+            
+            jumpCodeDiv.style.visibility = "hidden";
+            jumpCode0.style.visibility = "hidden";
+            jumpCode1.style.visibility = "hidden";
+            jumpCode2.style.visibility = "hidden";
+
+            jumpP1.style.visibility = "hidden";
+            jumpP2.style.visibility = "hidden";
+            jumpP3.style.visibility = "hidden";
             //console.log(gameImage);
             
             libColorPreBoss.style.visibility = "visible";
@@ -115,6 +167,10 @@
             libColorGamePlay.style.visibility = "visible";
 
             document.getElementById("footer").style.top = "825px";
+            
+            jumpCodeDiv.style.top = "0px"
+            jumpCodeDiv.style.height = "0px";
+            //window.scrollbars.visible = "false";
             //console.log(libColorPreBoss);
         }
     </script>
