@@ -60,16 +60,30 @@ p.gameDescription2{
 p.jumpCodeP0{
     position: inherit;
 
-    top:5%;
-    left:50%;
+    top:8%;
+    left:48%;
+    padding-right: 5%;
+    line-height: 2;
 }
 
 p.jumpCodeP1{
     position: inherit;
+
+    top:50%;
+    left:63%;
+
+    padding-right: 3%;
+    line-height: 2;
 }
 
 p.jumpCodeP2{
     position: inherit;
+
+    top:78%;
+    left:48%;
+    
+    padding-right: 5%;
+    line-height: 2;
 }
 
 div.JumpCodeDiv{
@@ -78,10 +92,16 @@ div.JumpCodeDiv{
     width: 95%;
     height: 210%;
     padding-bottom: 5%;
-    left:2%;
+    left:2.5%;
     
 }
 
+div.MapBuilderDiv{
+    position: absolute;
+    width: 95%;
+    padding-bottom: 5%;
+    left: 2.5%;
+}
 
 img.AutoMaticTitle{
     width: 375px;
@@ -100,7 +120,7 @@ img.AutoMaticSideGif{
 img.AutoMaticTopGif{
     width: 375px;
     position: absolute;
-    top: 65%;
+    top: 64.5%;
     left: 66%;
 }
 

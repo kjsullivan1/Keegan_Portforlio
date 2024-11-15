@@ -44,7 +44,7 @@
         <p id="gameDesc2" class="gameDescription2"></p>
     </div>
 
-    <div id="jumpCodeDiv" style="background-color: black; visibility: hidden; text-align: center;" class="JumpCodeDiv">
+    <div id="jumpCodeDiv" style="background-color: black; visibility: hidden; text-align: center; height: 0px; top: 0px;" class="JumpCodeDiv">
         <h2 style="color: white; text-decoration: underline;">Code Samples</h2>
         <p id="jumpSampleP0" class="jumpCodeP0" style="visibility: hidden; color: white;"></p>
         <p id="jumpSampleP1" class="jumpCodeP1" style="visibility: hidden; color: white;"></p>
@@ -52,6 +52,20 @@
         <img id="jumpCodeSample0" src="../Images/AutoMatic_CodeSample0_JumpTests.png" style="visibility: hidden;" class="jumpSample0">
         <img id="jumpCodeSample1" src="../Images/AutoMatic_CodeSample01_TestJump1.png" style="visibility: hidden;" class="jumpSample1">
         <img id="jumpCodeSample2" src="../Images/AutoMatic_CodeSample02_TestJump2.png" style="visibility: hidden;" class="jumpSample2">
+    </div>
+
+    <div id="mapBuilderDiv" style="background-color: black; visibility: hidden; text-align: center; height: 0px; top: 0px;" class="MapBuilderDiv">
+        <h2 style="color: white; text-decoration: underline;">Code Samples Part II</h2>
+
+        <img id="mapCode0" src="../Images/MapBuilder_CellStruct.png" class="cellStruct" style="position: absolute; top: 0px; left: 0px;">
+        <img id="mapCode1" src="../Images/MapBuilder_CellMapClass.png" class="cellMap" style="top: 0px; position: absolute; left: 0px;">
+        <img id="mapCode2" src="../Images/MapBuilder_ObjectClasses.png" class="mapObjects" style="top: 0px; position: absolute; left: 0px;">
+        <img id="mapCode3" src="../Images/MapBuilder_CollectMapObjects.png" class="collectObjects" style="top: 0px; position: absolute; left: 0px;">
+        <img id="mapCode4" src="../Images/MapBuilder_RunMethod.png" class="runMethod" style="top: 0px; position: absolute; left: 0px; width: 25%;">
+
+        <p id="mapSample0" class="mapCodeP0" style="color: white; position: absolute; top: 0px; line-height: 2;"></p>
+        <p id="mapSample1" class="mapCodeP1" style="color: white; position: absolute; top: 0px; line-height: 2;"></p>
+
     </div>
 
     <script>
@@ -62,10 +76,12 @@
 
         var gameDescription2 = document.getElementById("gameDesc2");
 
+        //Auto Matic
         var gameImage = document.getElementById("autoMaticTitle");
         var autoMaticSide = document.getElementById("autoMaticSideGif");
         var autoMaticTop = document.getElementById("autoMaticTopGif");
 
+        //Jump Code
         var jumpCodeDiv = document.getElementById("jumpCodeDiv");
         var jumpCode0 = document.getElementById("jumpCodeSample0");
         var jumpCode1 = document.getElementById("jumpCodeSample1");
@@ -75,18 +91,34 @@
         var jumpP2 = document.getElementById("jumpSampleP1");
         var jumpP3 = document.getElementById("jumpSampleP2");
 
+        //Map Builder 
+        var mapBuilderDiv = document.getElementById("mapBuilderDiv");
+
+        var mapCodeP0 = document.getElementById("mapSample0");
+        var mapCodeP1 = document.getElementById("mapSample1");
+
+        var mapCode0 = document.getElementById("mapCode0");
+        var mapCode1 = document.getElementById("mapCode1");
+        var mapCode2 = document.getElementById("mapCode2");
+        var mapCode3 = document.getElementById("mapCode3");
+        var mapCode4 = document.getElementById("mapCode4");
+        //End Auto Matic
+
+        //Liberation of Color
         var libColorTitle = document.getElementById("loCTitle");
         var libColorPreBoss = document.getElementById("loCPreBoss");
         var libColorGamePlay = document.getElementById("loCGamePlay");
+        //End Liberation of Color
 
         console.log(libColorTitle);
 
         function AutoMatic(){
             var newText = "Auto-Matic was my Bachelor program's Capstone project at New England Institute of Technology. A highlight of this project is that, even though it was a team of 3, it was solo-developed by me using the MonoGame framework. Similar to the design of this portfolio, with MonoGame, you are given a blank blue screen, the ability to manage content, and a few object classes to make a game. My role for this project was to essentially, build everything. To even begin our game we needed a physics engine and the ability to create maps for the player to move in. This was one of the best moments of the project for me as I had so much to do and I enjoyed the problem solving of discovering every small detail needed for what we were doing. The enemy AI was also programmed by me and I did not, nor did I plan to, use any libraries like 'PathFinder'. As I feel very green in this field, developing a project in MonoGame felt like the perfect opportunity to discover everything I could about the abilities I have been working on the previous 3 years. The overall project started to gain more friction towards the beginning of the end of development. However, with proper communication and open-mindedness, we were able to get over small humps and disagreements. One of the main mechanics was being questioned and was starting to be moved in a different direction than what another member of the team wanted. We didn't turn the situation into a simple numbers game and single out the other person, we talked and came to a conclusion."
-            var newText1 = "As for the game itself, Auto-Matic is a Metroidvania that mixes 2D side-scroll platforming with top-down dungeons. Each side-scrolling area (4 in total) ends in a dungeon, and each dungeon ends with a boss fight. Once you defeat the boss, you obtain their weapon and are able to use it in the side-scrolling sections of the game. After completing the dungeons and reaching the other side of the ship (the setting for this game), the player is challenged to defeat the final boss. We were given 20 (with a 6 week summer break making 26) weeks to complete this project as a group and the game should be available on steam!"
+            var newText1 = "As for the game itself, Auto-Matic is a Metroidvania that mixes 2D side-scroll platforming with top-down dungeons. Each side-scrolling area (4 in total) ends in a dungeon, and each dungeon ends with a boss fight. Once you defeat the boss, you obtain their weapon and are able to use it in the side-scrolling sections of the game. Both the side-scroll and top-down segments were coded using a 2D array with number assigned tiles. After completing the dungeons and reaching the other side of the ship (the setting for this game), the player is challenged to defeat the final boss. We were given 20 (with a 6 week summer break making 26) weeks to complete this project as a group and the game should be available on steam!"
             
-            var jumpDesc0 = "There were a lot of options to represent the code. In the end, I decided to show off the enemy's jump algorithm and my map building algorithm. To start, is my enemy's jump.";
-
+            var jumpDesc0 = "For my enemy AI, I have a long term goal that involves an enemy type that will be able to chase a player throughout levels, jumping and chasing freely. Something as simple as a jump for a player controller turns into something much more complicated when working with AI. At first, I only had platforms defined in the code based off the tile that was given in the map editor. I quickly discovered that the AI should only have access to certain platforms within what would become the AI's 'vision'. The vision is a set range that collects data and interacts with the map around it. When the conditions are met to check for a jump (when the player is above the enemy and landed), the 'vision' collects any platform that is within the range. I calculate 2 choices for the AI, one based off the player position, then one based off the enemy position. In the future, I intend to give the AI to know when to not check for a jump when it isn't in a position to jump anywhere. Currently, whenever the conditions are met for a jump, it tests and checks, taking up a lot of processing time. With the 2 locations chosen, I run my 'TestJump' method where I am attempting the different combinations of speed and jumping force to reach the targeted location. I do this as some map layouts and jumps require a lot of velocity, but not much force and vise versa.";
+            var jumpDesc1 = "My TestJump() method is basically a quick simulation of jumping towards the goal location. I make the goal location the center for accuracy. The 'while' loop at the top is basically an 'update', updating the simulation frame by frame. I want to optimize this in the future to possibly skip frames and make it more of a calculation rather than a simulation. As the physics for my game changes, the method would need to change in order to reflect the physics it is trying to emulate."
+            var jumpDesc2 = "Gravity is also simulated every 'frame'. I also recreated my collision checks to return the position instead of just checking and adjusting collisions. The success and failure of the jump is determined based off of this position. Once there is a successful jump. The chosen location is set as the target location and what was previously just emulated in code is now executed live in game."
 
             gameDescription.innerText = newText;
             gameDescription.style.position = "absolute";
@@ -104,6 +136,7 @@
             autoMaticSide.style.visibility = "visible";
             autoMaticTop.style.visibility = "visible";
 
+            //Jump Code
             jumpCodeDiv.style.visibility = "visible";
             jumpCode0.style.visibility = "visible";
             jumpCode1.style.visibility = "visible";
@@ -112,8 +145,46 @@
             jumpP1.style.visibility = "visible";
             jumpP1.style.textAlign = "none";
             jumpP1.innerText = jumpDesc0;
+
             jumpP2.style.visibility = "visible";
+            jumpP2.innerText = jumpDesc1;
+
             jumpP3.style.visibility = "visible";
+            jumpP3.innerText = jumpDesc2;
+
+            //Map Builder Code
+            mapBuilderDiv.style.visibility = "visible";
+            mapBuilderDiv.style.position = "absolute";
+            mapBuilderDiv.style.top = "320%";
+            mapBuilderDiv.style.height = "270%";
+
+            mapCode0.style.top = "5%";
+            mapCode0.style.left = "10%";
+
+            mapCode1.style.top = "4%";
+            mapCode1.style.left = "42.5%";
+
+            mapCodeP0.style.top = "18%";
+            mapCodeP0.style.left = "5%";
+            mapCodeP0.style.width = "35%";
+            mapCodeP0.innerText = "The concept for the top-down sections of the game is to clear a certain number of rooms and fight a boss at the end. Each room is generated using an algorithm that manipulates all aspects other than the size of a pre-built and chosen 2D array. To start we need to define a 'cell' which is essentially just a tile on the map (shown above). It holds the data of the tile and location. A fitness variable is used to represent if it already has been adjusted by the map builder. The 'CellMap' class (shown on the right) is used as my own type of 2D array. It is a 2D array of the Cell struct shown above. In the future, I intend to use the 'possNums, minNum, and maxNum' variables in order to use any set of tiles as the builder will know all the 'possible' tiles to use. For the project however, the class constructor converts the chosen map (10 possible maps) into my CellMap type.";
+
+            mapCode2.style.top = "46%";
+            mapCode2.style.left = "3%";
+
+            mapCode3.style.top = "46%";
+            mapCode3.style.left = "48%";
+            mapCode3.style.width = "48%";
+            mapCode3.style.height = "24.75%";
+
+            mapCodeP1.style.left = "5%";
+            mapCodeP1.style.top = "38%";
+            mapCodeP1.style.paddingRight = "5%";
+            mapCodeP1.innerText = "Now that we have the ability to track every tile on the map, we now need to know what objects we have AND what object is being checked ALONG with what that singular tile is connected to (if anything). As my AI isn't completely equipped to handle complicated structures, I requested that my level-designer limit the shapes of the walls to 4 shapes: Horizontal, Vertical, Diagonal, and LShape. When checking, I am essentially counting how many walls are directly connected and the directions they go in from that chosen tile. I calculate what the shape must be off that data, remove all of the read tiles' fitness so they won't be checked again, and store them as a MapObject object. A singular piece of the MapObject is represented with the Object class."
+
+            
+            mapCode4.style.top = "72.5%";
+            mapCode4.style.left = "3%";
 
             //console.log(gameImage);
 
@@ -124,7 +195,7 @@
    
            // gameDescription.style.width = "80%";
            // gameDescription.style.alignContent ="center";
-            document.getElementById("footer").style.top = "323%";
+            document.getElementById("footer").style.top = "600%";
         
             jumpCodeDiv.style.top = "110%";
             jumpCodeDiv.style.height = "210%";
@@ -160,6 +231,8 @@
             jumpP1.style.visibility = "hidden";
             jumpP2.style.visibility = "hidden";
             jumpP3.style.visibility = "hidden";
+
+            mapBuilderDiv.style.visibility = "hidden";
             //console.log(gameImage);
             
             libColorPreBoss.style.visibility = "visible";
@@ -170,6 +243,9 @@
             
             jumpCodeDiv.style.top = "0px"
             jumpCodeDiv.style.height = "0px";
+
+            mapBuilderDiv.style.top = "0px";
+            mapBuilderDiv.style.height = "0px";
             //window.scrollbars.visible = "false";
             //console.log(libColorPreBoss);
         }
