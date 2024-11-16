@@ -15,7 +15,6 @@
     <ul class = "Links">
         <li><a href="../Pages/index.html">About</a></li>
         <li><a href="../Pages/projects.html">Projects</a></li>
-        <li><a href="../Pages/resume.html">Resume</a></li>
         <li><a href="../Pages/contact.html">Contact</a></li>
     </ul>
 
@@ -70,6 +69,16 @@
 
     </div>
 
+    <div id="GoToDiv" style="background-color: black; visibility: hidden; text-align: center; height: 0px; top: 0px; position: absolute;">
+        <h2 style="color: white; text-decoration: underline;">Code Sample</h2>
+
+        <img id="goToVariables" src="../Images/LiberationOfColor/LoC_GoToVariables.png" class="GoToVariables" style="position: absolute; top: 0px; left: 0px;">
+        <img id="goToCode" src="../Images/LiberationOfColor/LoC_GoTo.png" class="GoToCode" style="position: absolute; top: 0px; left: 0px;">
+
+        <p id="goToSample0" class="goToCodeP0" style="color: white; position: absolute; top: 0px; left: 0px; line-height: 2;"></p>
+        <p id="goToSample1" class="goToCodeP1" style="color: white; position: absolute; top: 0px; left: 0px; line-height: 2;"></p>
+    </div>
+
     <script>
         var gameDescription = document.getElementById("gameDesc");
             gameDescription.style.position = "absolute";
@@ -111,6 +120,13 @@
         var libColorTitle = document.getElementById("loCTitle");
         var libColorPreBoss = document.getElementById("loCPreBoss");
         var libColorGamePlay = document.getElementById("loCGamePlay");
+
+        var libColorCodeDiv0 = document.getElementById("GoToDiv");
+        var libColorVariables = document.getElementById("goToVariables");
+        var libColorGoTo = document.getElementById("goToCode");
+
+        var libColorCodeP0 = document.getElementById("goToSample0");
+        var libColorCodeP1 = document.getElementById("goToSample1");
         //End Liberation of Color
 
         console.log(libColorTitle);
@@ -225,6 +241,9 @@
             libColorGamePlay.style.visibility = "hidden";
             libColorPreBoss.style.visibility = "hidden";
             libColorTitle.style.visibility = "hidden";
+            libColorCodeDiv0.style.visibility = "hidden";
+            libColorCodeDiv0.style.height = "0px";
+            libColorCodeDiv0.style.top = "0px";
    
            // gameDescription.style.width = "80%";
            // gameDescription.style.alignContent ="center";
@@ -241,13 +260,13 @@
             
             gameDescription.innerText = newText;
             gameDescription.style.position = "absolute";
-            gameDescription.style.top = "300px";
+            gameDescription.style.top = "30%";
             gameDescription.style.padding = "10px 30px";
             gameDescription.style.backgroundColor = "black";
    
             gameDescription2.innerText = newText1;
             gameDescription2.style.position = "absolute";
-            gameDescription2.style.top = "715px";
+            gameDescription2.style.top = "75%";
             gameDescription2.style.padding = "10px 30px";
             gameDescription2.style.backgroundColor = "black";
             
@@ -272,7 +291,34 @@
             libColorTitle.style.visibility = "visible";
             libColorGamePlay.style.visibility = "visible";
 
-            document.getElementById("footer").style.top = "825px";
+            libColorCodeDiv0.style.visibility = "visible";
+            libColorCodeDiv0.style.top = "90%";
+            libColorCodeDiv0.style.height = "125%";
+            libColorCodeDiv0.style.width = "95%";
+            libColorCodeDiv0.style.left = "2%";
+
+            libColorVariables.style.top = "15%";
+            libColorVariables.style.left = "15%";
+
+            libColorCodeP0.style.top = "10%";
+            libColorCodeP0.style.left = "35%";
+            libColorCodeP0.style.paddingRight = "5%";
+            libColorCodeP0.innerText = "Here, I will be showing off the dynamic 'GoTo' method I created during this game jam that I ended up using for a majority of my 3D projects. " + 
+            "The object is given locations through empty objects created in Unity. It can be any amount of locations, and the object with the script will go to each location in a loop. " + 
+            "At any time, I could also call a GoToStartPos() method to return to the intial location at any time.\n\n To the left are the main variables used during this process. The array " +
+            "of the type Transform are the points that are rotated through from beginning to end.";
+
+            libColorGoTo.style.top = "35%";
+            libColorGoTo.style.left = "45%";
+
+            libColorCodeP1.style.top = "45%";
+            libColorCodeP1.style.left = "3%";
+            libColorCodeP1.style.maxWidth = "40%"
+            libColorCodeP1.innerText = "To the right is the main method 'GoToPoint()'. Checking it's position to the goal position and adjusting as needed." + 
+            " When it reaches the last location, it will reset the count, going back to the starting point.";
+
+
+            document.getElementById("footer").style.top = "210%";
             
             jumpCodeDiv.style.top = "0px"
             jumpCodeDiv.style.height = "0px";
@@ -284,7 +330,7 @@
         }
     </script>
 
-    <div id="footer" class="footer" style="position: absolute; bottom: 0; left: 0;">
+    <div id="footer" class="footer" style="position: absolute; bottom: 0; left: 0; width: 100%;">
         <hr noshade size="40" width="99%" color="darkslategrey" class="footer"/>
     </div>
     

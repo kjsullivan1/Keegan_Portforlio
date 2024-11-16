@@ -127,23 +127,23 @@ img.AutoMaticTopGif{
 img.LoCTitle{
     width: 375px;
     position: absolute;
-    top:65%;
+    top:50%;
     left: 10%;
 }
 
 img.LoCPreBoss{
     width: 25%;
     position: absolute;
-    left: 37.25%;
+    left: 35.25%;
     height: 30%;
-    top:62.5%;  
+    top:46%;  
 }
 
 img.LoCGamePlay{
     width: 375px;
     position: absolute;
     left: 65%;
-    top:65%;
+    top:50%;
 }
 
 img.jumpSample0{
@@ -170,6 +170,6 @@ img.jumpSample2{
     left: 2%;
 }
 
-#footer.footer{
+#Footer.footer{
     width: 100%;
 }
