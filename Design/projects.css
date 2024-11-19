@@ -22,6 +22,7 @@ a{
 
 body{
     background-color:cornflowerblue;
+   
 }
 
 
@@ -69,7 +70,7 @@ p.jumpCodeP0{
 p.jumpCodeP1{
     position: inherit;
 
-    top:50%;
+    top:40%;
     left:55%;
 
     padding-right: 3%;
@@ -79,7 +80,7 @@ p.jumpCodeP1{
 p.jumpCodeP2{
     position: inherit;
 
-    top:78%;
+    top:60%;
     left:48%;
     
     padding-right: 5%;
@@ -90,7 +91,7 @@ div.JumpCodeDiv{
     position: absolute;
     top:110%;
     width: 95%;
-    height: 210%;
+    height: 1200px;
     padding-bottom: 5%;
     left:2.5%;
     
@@ -127,7 +128,7 @@ img.AutoMaticTopGif{
 img.LoCTitle{
     width: 375px;
     position: absolute;
-    top:50%;
+    top:55%;
     left: 10%;
 }
 
@@ -136,14 +137,14 @@ img.LoCPreBoss{
     position: absolute;
     left: 35.25%;
     height: 30%;
-    top:46%;  
+    top:53%;  
 }
 
 img.LoCGamePlay{
     width: 375px;
     position: absolute;
     left: 65%;
-    top:50%;
+    top:55%;
 }
 
 img.jumpSample0{
@@ -155,10 +156,10 @@ img.jumpSample0{
 }
 
 img.jumpSample1{
-    width: 800px;   
+    width: 740px;   
     position: inherit;
 
-    top:45%;
+    top:35%;
     left: 2%;
 }
 
@@ -166,7 +167,7 @@ img.jumpSample2{
     width: 600px;
     position: inherit;
 
-    top: 73%;
+    top: 55.5%;
     left: 2%;
 }
 
