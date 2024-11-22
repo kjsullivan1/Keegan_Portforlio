@@ -29,6 +29,11 @@ div.abtMeDiv{
     top:25%;
 }
 
+div.contactDiv{
+    width: 50%;
+    top: 45%;
+}
+
 p.abtMe{
     background-color: black;
     color: white;
